@@ -1,6 +1,6 @@
 from textblob import TextBlob
 
-# from 01_connection import connect_to_rabbitmq
+from a_connection import connect_to_rabbitmq
 class SentimentAnalysisAgent:
     def __init__(self):
         self.connection, self.channel = connect_to_rabbitmq()

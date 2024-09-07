@@ -1,4 +1,4 @@
-# from 01_connection import connect_to_rabbitmq
+from a_connection import connect_to_rabbitmq
 
 class PositiveActionAgent:
     def __init__(self):
