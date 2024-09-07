@@ -13,3 +13,4 @@ if __name__ == "__main__":
     coordinator = CoordinatorAgent()
     coordinator.send_text_for_analysis("I am so happy with the service!")
     coordinator.send_text_for_analysis("This is terrible, I'm very upset.")
+    coordinator.send_text_for_analysis("Today is going to be a good day")
