@@ -3,3 +3,7 @@ The following files are needed prior to running the example available in this re
 1. Erlang/OTP 26 | https://www.erlang.org/downloads/26
 2. RabbitMQ | https://www.rabbitmq.com/docs/install-windows#installer
 3. pika | conda install conda-forge::pika
+
+To be able to use GPU to train, do:
+4. conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
+5. conda install pytorch::torchtext
