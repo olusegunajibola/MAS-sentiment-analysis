@@ -2,3 +2,5 @@ sent_analysis/.vector_cache
 *.pth
 train.tsv
 01_text_classification_BERT.ipynb
+*.joblib
+*.pkl
