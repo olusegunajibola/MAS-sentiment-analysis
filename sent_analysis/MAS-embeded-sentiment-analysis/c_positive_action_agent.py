@@ -4,7 +4,8 @@ import json
 def callback(ch, method, properties, body):
     message = json.loads(body)
     sentiment = message['sentiment']
-    if sentiment == 'positive':
+    # if sentiment == 'positive':
+    if sentiment == 2:
         print(f"Positive action for text: {message['text']}")
 
 # Setup RabbitMQ connection

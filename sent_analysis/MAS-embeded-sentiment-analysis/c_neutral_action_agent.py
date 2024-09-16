@@ -4,7 +4,8 @@ import json
 def callback(ch, method, properties, body):
     message = json.loads(body)
     sentiment = message['sentiment']
-    if sentiment == 'neutral':
+    # if sentiment == 'neutral':
+    if sentiment == 1:
         print(f"Neutral action for text: {message['text']}")
 
 # Setup RabbitMQ connection

@@ -8,7 +8,7 @@ import json
 
 class SentimentAnalysisAgent:
     def __init__(self, distilbert_path='D:\Data\PyCharmProjects\MAS-sentiment-analysis\sent_analysis\models/DB_n_LR/DB.pth',
-                 logistic_model_path='D:\Data\PyCharmProjects\MAS-sentiment-analysis\sent_analysis\models/models/DB_n_LR/logistic_regression_model.pkl'):
+                 logistic_model_path='D:\Data\PyCharmProjects\MAS-sentiment-analysis\sent_analysis\models/DB_n_LR/logistic_regression_model.pkl'):
         # Load the DistilBERT model and tokenizer
         self.model_class, self.tokenizer_class, self.pretrained_weights = (
             transformers.DistilBertModel, transformers.DistilBertTokenizer, 'distilbert-base-uncased')
@@ -63,7 +63,51 @@ class SentimentAnalysisAgent:
 
         return sentiment
 
+    # def send_message_to_rabbitmq(self, text, sentiment):
+    #     # Create connection to RabbitMQ
+    #     connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+    #     channel = connection.channel()
+    #
+    #     # Declare queue
+    #     channel.queue_declare(queue='sentiment')
+    #
+    #     # Prepare the message
+    #     message = {'text': text, 'sentiment': sentiment[0]}
+    #     message = json.dumps(message)
+    #
+    #     # Send the message
+    #     channel.basic_publish(exchange='', routing_key='sentiment', body=message)
+    #     print(f'Sent sentiment: {sentiment[0]} for text: {text}')
+    #
+    #     # Close connection
+    #     connection.close()
+
+    # def send_message_to_rabbitmq(self, text, sentiment):
+    #     # Convert the sentiment to a serializable format
+    #     sentiment = sentiment[0] if isinstance(sentiment, np.ndarray) else sentiment
+    #
+    #     # Create connection to RabbitMQ
+    #     connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+    #     channel = connection.channel()
+    #
+    #     # Declare queue
+    #     channel.queue_declare(queue='sentiment')
+    #
+    #     # Prepare the message
+    #     message = {'text': text, 'sentiment': str(sentiment)}
+    #     message = json.dumps(message)
+    #
+    #     # Send the message
+    #     channel.basic_publish(exchange='', routing_key='sentiment', body=message)
+    #     print(f'Sent sentiment: {sentiment}, for text: {text}')
+    #
+    #     # Close connection
+    #     connection.close()
+
     def send_message_to_rabbitmq(self, text, sentiment):
+        # Convert sentiment to an integer if it's a NumPy array or ensure it's in the correct format
+        sentiment = int(sentiment[0]) if isinstance(sentiment, np.ndarray) else int(sentiment)
+
         # Create connection to RabbitMQ
         connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
         channel = connection.channel()
@@ -72,12 +116,12 @@ class SentimentAnalysisAgent:
         channel.queue_declare(queue='sentiment')
 
         # Prepare the message
-        message = {'text': text, 'sentiment': sentiment[0]}
+        message = {'text': text, 'sentiment': sentiment}
         message = json.dumps(message)
 
         # Send the message
         channel.basic_publish(exchange='', routing_key='sentiment', body=message)
-        print(f'Sent sentiment: {sentiment[0]} for text: {text}')
+        print(f'Sent sentiment: {sentiment} for text: {text}')
 
         # Close connection
         connection.close()
