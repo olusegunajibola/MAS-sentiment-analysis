@@ -1,4 +1,4 @@
-from sentiment_analysis_agent import SentimentAnalysisAgent
+from b_sentiment_analysis_agent import SentimentAnalysisAgent
 
 def main():
     # Instantiate the sentiment analysis agent
