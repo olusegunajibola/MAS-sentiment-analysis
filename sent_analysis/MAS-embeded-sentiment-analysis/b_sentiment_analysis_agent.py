@@ -7,8 +7,8 @@ import json
 
 
 class SentimentAnalysisAgent:
-    def __init__(self, distilbert_path='./models/DB_n_LR/DB.pth',
-                 logistic_model_path='./models/DB_n_LR/logistic_regression_model.pkl'):
+    def __init__(self, distilbert_path='D:\Data\PyCharmProjects\MAS-sentiment-analysis\sent_analysis\models/DB_n_LR/DB.pth',
+                 logistic_model_path='D:\Data\PyCharmProjects\MAS-sentiment-analysis\sent_analysis\models/models/DB_n_LR/logistic_regression_model.pkl'):
         # Load the DistilBERT model and tokenizer
         self.model_class, self.tokenizer_class, self.pretrained_weights = (
             transformers.DistilBertModel, transformers.DistilBertTokenizer, 'distilbert-base-uncased')
