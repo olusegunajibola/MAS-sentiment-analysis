@@ -1,6 +1,4 @@
-# MAS-sentiment-analysis
-
-Title: “Development of a Scalable Multi-Agent System for Financial Sentiment Analysis Using RabbitMQ”
+# Development of a Scalable Multi-Agent System for Financial Sentiment Analysis Using RabbitMQ
 
 We build a Multi-Agent System (MAS) for Sentiment Analysis in this repo.
 
