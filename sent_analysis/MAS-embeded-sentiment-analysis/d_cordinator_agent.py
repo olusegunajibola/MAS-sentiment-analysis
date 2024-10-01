@@ -5,7 +5,8 @@ def main():
     agent = SentimentAnalysisAgent()
 
     # Sample text data
-    text = "The company's profits are expected to rise this quarter."
+    # text = "The company's profits are expected to rise this quarter."
+    text = "Earnings are down by half this year. The losses are very much."
 
     # Process the text and send to RabbitMQ
     agent.process_and_send(text)
