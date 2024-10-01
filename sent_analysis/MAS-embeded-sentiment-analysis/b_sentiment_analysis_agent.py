@@ -5,6 +5,8 @@ import pickle
 import pika
 import json
 
+import warnings
+warnings.filterwarnings('ignore')
 
 class SentimentAnalysisAgent:
     def __init__(self, distilbert_path='D:\Data\PyCharmProjects\MAS-sentiment-analysis\sent_analysis\models/DB_n_LR/DB.pth',
