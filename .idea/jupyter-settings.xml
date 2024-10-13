@@ -10,7 +10,7 @@
               <option name="sdkName" value="" />
               <option name="environmentVariables">
                 <map>
-                  <entry name="CUDA_LAUNCH_BLOCKING" value="1" />
+                  <entry name="GROQ_API_KEY" value="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" />
                 </map>
               </option>
             </JupyterConnectionParameters>
