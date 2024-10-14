@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\data\balanced_negative_positive.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\data\financial_news.csv">
           <value>
             <Attribute>
