@@ -49,7 +49,7 @@ def callback(ch, method, properties, body):
     print(f"Positive Action Agent received message at {time.ctime(start_time)}: {message}")
 
     # Simulate processing
-    time.sleep(1)  # Optional: Simulate some processing delay
+    # time.sleep(1)  # Optional: Simulate some processing delay
 
     end_time = time.time()
     print(f"Finished processing positive sentiment at {time.ctime(end_time)}. Processing time: {end_time - start_time:.2f} seconds.")
