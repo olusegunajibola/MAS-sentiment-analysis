@@ -1,1 +1,1 @@
-from b_sentiment_analysis_agent import SentimentAnalysisAgent
+from iota_env.simple_transaction import perform_transaction
