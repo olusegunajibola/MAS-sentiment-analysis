@@ -55,9 +55,6 @@ E. mint some nfts or perform some transactions.
 
 C & D assumes you have already created a user.
 
-def mint_nft():
-    outputs = [MintNftParams(
-        immutableMetadata=utf8_to_hex("some immutable nft metadata: By Emmanuel 17 July 2024"),
-    )]
-    transaction = account.mint_nfts(outputs)
-    print(f'Block sent: {os.environ["EXPLORER_URL"]}/block/{transaction.blockId}')
+AGENTS In ACTION
+PAA = https://explorer.shimmer.network/shimmer-testnet/block/0x84a398921e71d65a6840d0dba2c7a316975aa6012d1c092b0857bfa945568f91?tab=Payload
+NegAA = https://explorer.shimmer.network/shimmer-testnet/block/0x09c9c9db54ee7442fc0bce939a859fb329a82e43a281de253733619c071ab2f3?tab=Payload
