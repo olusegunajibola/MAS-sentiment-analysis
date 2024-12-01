@@ -1,10 +1,11 @@
 # Development of a Scalable Multi-Agent System for Financial Sentiment Analysis Using RabbitMQ
+---
 
-[//]: # (We build a Multi-Agent System &#40;MAS&#41; for Sentiment Analysis in this repo.)
 This project is a **Multi-Agent System (MAS)** designed to analyze financial sentiment in user-provided text and route
 actionable insights to specialized agents based on sentiment. The system uses **RabbitMQ** for communication between
 agents and a machine learning model for sentiment analysis, and IOTA SDK for distributed ledger transactions and NFT
 minting.
+
 ---
 ## **Table of Contents**
 
