@@ -13,12 +13,14 @@ minting.
 - [System Architecture](#system-architecture)
 - [Features](#features)
 - [Prerequisites](#prerequisites)
+- [Key Results](#key-results)
 - [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
 - [Future Improvements](#future-improvements)
+- [Acknowledgements](#acknowledgement)
 ---
 ## **Introduction**
 This project demonstrates a distributed architecture where agents collaborate to process user input efficiently:
@@ -31,14 +33,13 @@ This project demonstrates a distributed architecture where agents collaborate to
 
 Agents interact through RabbitMQ, and sentiment is classified using a pre-trained DistilBERT model combined with logistic regression.
 
+Data source: Financial PhraseBank by Malo et al. (2014).
+
 ---
 ## **System Architecture**
 
-The process used to achieve this is given below:
-
-![mas-sentiment-analysisv1 1](https://github.com/user-attachments/assets/f532a6da-5c2f-4866-9617-d7de864143a2)
-
-[//]: # (![Methodology]&#40;images/mas-sentiment-analysisv1.png&#41;)
+The system architecture is given below:
+![mas-sentiment-analysisv1.3.png](images/mas-sentiment-analysisv1.3.png)
 
 The system comprises the following agents:
 1. **Coordinator Agent**:
@@ -81,6 +82,25 @@ Before running the project, ensure you have:
 - IOTA SDK installed (see `readme.txt`)
 - A wallet setup for IOTA transactions
 - Required Python libraries (see `environment.yaml`)
+---
+## **Key Results**
+The image below shows the performance of the models trained on the financial sentiment analysis. 
+![compare-models.png](images/compare-models.png)
+
+### **Agents in Action**
+The figure below shows us our IDE with the CoA (coordinator agent) ready to collect inputs and other agents awaiting 
+messages in the MAS.
+![02_start_agents.jpg](images/agent_results/02_start_agents.jpg)
+With the input _The stock price tanked after the recent publication of awful earnings for the third quarter._ using 
+the CoA, the NegAA (Negative Action Agent) responds accordingly by executing a DLT with the transaction link and 
+block ID provided. In this execution, the PAA (Positive Action Agent) and NeuAA (Neutral Action Agent) are uninvolved.
+![03_action_neg_agent.jpg](images/agent_results/03_action_neg_agent.jpg)
+The webpage for the transaction is provided in Figure below. 
+![04_action_neg_agent_response_transaction.jpg](images/agent_results/04_action_neg_agent_response_transaction.jpg)
+With the input _The company's stock is making gains in the market despite drastic government policies._ using the CoA, the PAA responds accordingly by minting an NFT based on the sentiment predicted by the SAA and the text provided by the user with the transaction link and block ID provided. In this execution, the NegAA and NeuAA are uninvolved.
+![05_action_pos_agent.jpg](images/agent_results/05_action_pos_agent.jpg)
+The webpage for the transaction is provided below.
+![06_action_pos_agent_response_nft.jpg](images/agent_results/06_action_pos_agent_response_nft.jpg)
 ---
 ## **Setup and Installation**
 
@@ -177,6 +197,12 @@ This project is licensed under the Apache-2.0 License. See `LICENSE` for details
 * Extend NFT metadata for richer content.
 * Implement more advanced action agents (e.g., notifications or trading bots).
 ---
+## **Acknowledgements**
+This project was carried out as a part of the requirement in fulfilment of the achievement of a master's degree in 
+Applied Data Science at the [Department of Engineering and Computer Science and Mathematics (DISIM)](https://www.
+disim.univaq.it/) of the [University of L'Aquila](https://www.univaq.it/) under the supervision of Prof. [Giovanni 
+De Gasperis](https://www.disim.univaq.it/GiovanniDeGasperis).
 
+---
 
 
