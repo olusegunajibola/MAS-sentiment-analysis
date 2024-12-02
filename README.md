@@ -20,7 +20,7 @@ minting.
 - [Contributing](#contributing)
 - [License](#license)
 - [Future Improvements](#future-improvements)
-- [Acknowledgements](#acknowledgement)
+- [Acknowledgements](#acknowledgements)
 ---
 ## **Introduction**
 This project demonstrates a distributed architecture where agents collaborate to process user input efficiently:
@@ -199,8 +199,7 @@ This project is licensed under the Apache-2.0 License. See `LICENSE` for details
 ---
 ## **Acknowledgements**
 This project was carried out as a part of the requirement in fulfilment of the achievement of a master's degree in 
-Applied Data Science at the [Department of Engineering and Computer Science and Mathematics (DISIM)](https://www.
-disim.univaq.it/) of the [University of L'Aquila](https://www.univaq.it/) under the supervision of Prof. [Giovanni 
+Applied Data Science at the [Department of Engineering and Computer Science and Mathematics (DISIM)](https://www.disim.univaq.it/) of the [University of L'Aquila](https://www.univaq.it/) under the supervision of Prof. [Giovanni 
 De Gasperis](https://www.disim.univaq.it/GiovanniDeGasperis).
 
 ---
