@@ -90,17 +90,28 @@ The image below shows the performance of the models trained on the financial sen
 ### **Agents in Action**
 The figure below shows us our IDE with the CoA (coordinator agent) ready to collect inputs and other agents awaiting 
 messages in the MAS.
+
 ![02_start_agents.jpg](images/agent_results/02_start_agents.jpg)
+
 With the input _The stock price tanked after the recent publication of awful earnings for the third quarter._ using 
 the CoA, the NegAA (Negative Action Agent) responds accordingly by executing a DLT with the transaction link and 
 block ID provided. In this execution, the PAA (Positive Action Agent) and NeuAA (Neutral Action Agent) are uninvolved.
+
 ![03_action_neg_agent.jpg](images/agent_results/03_action_neg_agent.jpg)
+
 The webpage for the transaction is provided in Figure below. 
+
 ![04_action_neg_agent_response_transaction.jpg](images/agent_results/04_action_neg_agent_response_transaction.jpg)
-With the input _The company's stock is making gains in the market despite drastic government policies._ using the CoA, the PAA responds accordingly by minting an NFT based on the sentiment predicted by the SAA and the text provided by the user with the transaction link and block ID provided. In this execution, the NegAA and NeuAA are uninvolved.
+
+With the input _The company's stock is making gains in the market despite drastic government policies._ using the 
+CoA, the PAA responds accordingly by minting an NFT based on the sentiment predicted by the SAA and the text provided by the user with the transaction link and block ID provided. In this execution, the NegAA and NeuAA are uninvolved.
+
 ![05_action_pos_agent.jpg](images/agent_results/05_action_pos_agent.jpg)
+
 The webpage for the transaction is provided below.
+
 ![06_action_pos_agent_response_nft.jpg](images/agent_results/06_action_pos_agent_response_nft.jpg)
+
 ---
 ## **Setup and Installation**
 
