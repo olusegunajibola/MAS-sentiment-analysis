@@ -4,4 +4,5 @@ train.tsv
 01_text_classification_BERT.ipynb
 *.joblib
 *.pkl
+.idea
 Data_Aug.ipynb
