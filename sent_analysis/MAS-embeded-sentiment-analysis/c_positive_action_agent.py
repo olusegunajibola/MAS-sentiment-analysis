@@ -13,7 +13,8 @@ def callback(ch, method, properties, body):
 
     if sentiment == 2:
         print("Minting an NFT for the positive sentiment...")
-        mint_nft("positive", text)  # Pass the sentiment and text to mint_nft
+        mint_nft("positive", text)  # Pass the
+        # sentiment and text to mint_nft
 
     end_time = time.time()
     print(f"Finished processing positive sentiment at {time.ctime(end_time)}. Processing time: {end_time - start_time:.2f} seconds.")
